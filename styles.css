@@ -58,3 +58,51 @@ p {
 .name, .info {
     padding-left: 1rem;
 }
+
+@media screen and (max-width: 1300px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-auto-rows: minmax(200px, auto);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sidebar {
+        grid-row: span 5;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-auto-rows: minmax(200px, auto);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-auto-rows: minmax(200px, auto);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
